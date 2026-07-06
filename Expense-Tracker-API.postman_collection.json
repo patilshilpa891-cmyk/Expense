@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "Habit Tracker API",
+    "_postman_id": "12345678-abcd-1234-abcd-123456789000",
+    "description": "Simple Habit Tracker REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Habits",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/habits",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "habits"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Habit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Drink Water\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/habits",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "habits"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Habit",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/habits/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "habits",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
